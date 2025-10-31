@@ -1,0 +1,54 @@
+INFO - 2025-06-26 20:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 20:26:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "BookingOnline/StrukLayanan/index.php"
+[Method: GET, Route: struk-layanan/378]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('BookingOnline/StrukLayanan/index.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('BookingOnline/StrukLayanan/index', [], true)
+ 3 APPPATH\Controllers\BookingOnline\Struk.php(29): view('BookingOnline/StrukLayanan/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingOnline\Struk->layanan('378')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingOnline\Struk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-06-26 20:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 20:27:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "BookingOnline/StrukLayanan/index.php"
+[Method: GET, Route: struk-layanan/378]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('BookingOnline/StrukLayanan/index.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('BookingOnline/StrukLayanan/index', [], true)
+ 3 APPPATH\Controllers\BookingOnline\Struk.php(29): view('BookingOnline/StrukLayanan/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingOnline\Struk->layanan('378')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingOnline\Struk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-06-26 20:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-26 20:27:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "BookingOnline/StrukLayananPembelian/index.php"
+[Method: GET, Route: struk-layanan/378]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('BookingOnline/StrukLayananPembelian/index.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('BookingOnline/StrukLayananPembelian/index', [], true)
+ 3 APPPATH\Controllers\BookingOnline\Struk.php(29): view('BookingOnline/StrukLayananPembelian/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingOnline\Struk->layanan('378')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingOnline\Struk))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-06-26 20:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-26 20:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

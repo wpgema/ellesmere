@@ -1,0 +1,840 @@
+INFO - 2025-05-02 00:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 00:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 00:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 00:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 00:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 00:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 00:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 00:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 01:09:39 --> mysqli_sql_exception: Unknown column 'kode_pembelian' in 'field list' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PaidModel.php(35): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pembelian.php(49): App\Models\PaidModel->saveData(Array)
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->prosesBeli('1')
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+#12 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-05-02 01:09:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_pembelian' in 'field list'
+[Method: POST, Route: pembelian/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `paid` (`paid_off`, `kode_pembelian`, `created_at`, `updated_at`) VALUES (:paid_off:, :kode_pembelian:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Models\PaidModel.php(35): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Owner\Pembelian.php(49): App\Models\PaidModel->saveData([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->prosesBeli('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 01:09:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_pembelian' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `paid` (`paid_off`, `kode_pembelian`, `created_at`, `updated_at`) VALUES (\'600000\', \'6625\', \'2025-05-02 01:09:39\', \'2025-05-02 01:09:39\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `paid` (`paid_off`, `kode_pembelian`, `created_at`, `updated_at`) VALUES (\'600000\', \'6625\', \'2025-05-02 01:09:39\', \'2025-05-02 01:09:39\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `paid` (`paid_off`, `kode_pembelian`, `created_at`, `updated_at`) VALUES (:paid_off:, :kode_pembelian:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Models\PaidModel.php(35): CodeIgniter\BaseModel->save([...])
+ 9 APPPATH\Controllers\Owner\Pembelian.php(49): App\Models\PaidModel->saveData([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->prosesBeli('1')
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 01:09:39 --> [Caused by] mysqli_sql_exception: Unknown column 'kode_pembelian' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `paid` (`paid_off`, `kode_pembelian`, `created_at`, `updated_at`) VALUES (\'600000\', \'6625\', \'2025-05-02 01:09:39\', \'2025-05-02 01:09:39\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `paid` (`paid_off`, `kode_pembelian`, `created_at`, `updated_at`) VALUES (\'600000\', \'6625\', \'2025-05-02 01:09:39\', \'2025-05-02 01:09:39\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `paid` (`paid_off`, `kode_pembelian`, `created_at`, `updated_at`) VALUES (\'600000\', \'6625\', \'2025-05-02 01:09:39\', \'2025-05-02 01:09:39\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `paid` (`paid_off`, `kode_pembelian`, `created_at`, `updated_at`) VALUES (:paid_off:, :kode_pembelian:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Models\PaidModel.php(35): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\Owner\Pembelian.php(49): App\Models\PaidModel->saveData([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->prosesBeli('1')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 01:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 01:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 02:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 02:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 02:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 02:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 02:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 02:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:51:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INNER JOIN products ON purchase.kode_product = kode_product.product FROM purc...' at line 1 in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pem...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pem...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pem...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pem...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:51:25 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INNER JOIN products ON purchase.kode_product = kode_product.product FROM purc...' at line 1
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = kode_product.product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:51:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INNER JOIN products ON purchase.kode_product = kode_product.product FROM purc...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = kode_product.product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = kode_product.product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = kode_product.product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:51:25 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INNER JOIN products ON purchase.kode_product = kode_product.product FROM purc...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = kode_product.product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = kode_product.product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = kode_product.product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = kode_product.product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:52:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INNER JOIN products ON purchase.kode_product = product.kode_product FROM purc...' at line 1 in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pem...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pem...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pem...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pem...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:52:46 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INNER JOIN products ON purchase.kode_product = product.kode_product FROM purc...' at line 1
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = product.kode_product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:52:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INNER JOIN products ON purchase.kode_product = product.kode_product FROM purc...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = product.kode_product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = product.kode_product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = product.kode_product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:52:46 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INNER JOIN products ON purchase.kode_product = product.kode_product FROM purc...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = product.kode_product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = product.kode_product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = product.kode_product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in INNER JOIN products ON purchase.kode_product = product.kode_product FROM purchase WHERE status = pemesanan GROUP BY kode_pembelian')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:53:36 --> mysqli_sql_exception: Column 'supplier' in field list is ambiguous in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pem...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pem...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pem...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pem...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:53:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'supplier' in field list is ambiguous
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:53:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'supplier' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:53:36 --> [Caused by] mysqli_sql_exception: Column 'supplier' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:54:08 --> mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pem...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pem...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pem...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pem...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:54:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:54:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:54:08 --> [Caused by] mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(20): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:55:11 --> mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pem...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pem...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pem...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pem...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:55:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:55:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:55:11 --> [Caused by] mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:56:04 --> mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pem...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pem...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pem...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pem...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:56:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:56:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:56:04 --> [Caused by] mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:56:12 --> mysqli_sql_exception: Unknown column 'pemesana' in 'where clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pem...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pem...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pem...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pem...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:56:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesana' in 'where clause'
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesana GROUP BY kode_pembelian')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:56:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesana' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesana GROUP BY kode_pembelian')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesana GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesana GROUP BY kode_pembelian')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:56:12 --> [Caused by] mysqli_sql_exception: Unknown column 'pemesana' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesana GROUP BY kode_pembelian', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesana GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesana GROUP BY kode_pembelian')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesana GROUP BY kode_pembelian')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:56:45 --> mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pem...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pem...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pem...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pem...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:56:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:56:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:56:45 --> [Caused by] mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product WHERE status = pemesanan')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:57:02 --> mysqli_sql_exception: Unknown column 'product.kode_product' in 'on clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pem...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pem...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pem...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pem...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:57:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.kode_product' in 'on clause'
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:57:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.kode_product' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:57:02 --> [Caused by] mysqli_sql_exception: Unknown column 'product.kode_product' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = product.kode_product')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:57:24 --> mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pem...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pem...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pem...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pem...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:57:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:57:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:57:24 --> [Caused by] mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE status = pemesanan GROUP BY kode_pembelian', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE status = pemesanan GROUP BY kode_pembelian')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-02 02:57:38 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: pemesanan]
+in APPPATH\Views\Owner\Pemesanan\index.php on line 42.
+ 1 APPPATH\Views\Owner\Pemesanan\index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Pemesanan\\index.php', 42)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Pemesanan\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Pemesanan/index', [], true)
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(23): view('Owner/Pemesanan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 02:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 02:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 02:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 02:59:58 --> mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 02:59:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product where status = pemesanan')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:59:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product where status = pemesanan')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product where status = pemesanan')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product where status = pemesanan')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 02:59:58 --> [Caused by] mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product where status = pemesanan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product where status = pemesanan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product where status = pemesanan')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product where status = pemesanan')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 03:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 03:00:48 --> mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 03:00:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 03:00:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 03:00:48 --> [Caused by] mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 03:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-02 03:01:42 --> mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-02 03:01:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+[Method: GET, Route: pemesanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 2 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 03:01:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 4 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-02 03:01:42 --> [Caused by] mysqli_sql_exception: Unknown column 'pemesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, kode_pembelian, purchase.kode_product, status, name, purchase.supplier, purchase.qty, date_in FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product WHERE purchase.status = pemesanan')
+ 5 APPPATH\Models\PembelianModel.php(72): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Pemesanan.php(21): App\Models\PembelianModel->getAllDataByStatusPembelian('pemesanan')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-02 03:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 03:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 03:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 03:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 03:33:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 03:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 03:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 03:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 03:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-02 03:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

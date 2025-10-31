@@ -1,0 +1,654 @@
+INFO - 2025-05-06 00:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-06 00:09:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE kode_penjualan = '1984'' at line 10 in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('\r\n            U...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            U...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            U...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('\r\n            U...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\SaleModel.php(59): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Penjualan.php(47): App\Models\SaleModel->updateData(Array)
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-06 00:09:02 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE kode_penjualan = '1984'' at line 10
+[Method: POST, Route: penjualan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('
+            UPDATE sale
+                SET 
+            telp = \'083125891431\',
+            customer_name = \'Ahmad\',
+            total_product = \'80000\',
+            total_service = \'20000\',
+            total_price = \'100000\',
+            id_employe = \'1\',
+            status = \'selesai\',
+                WHERE kode_penjualan = \'1984\'
+        ')
+ 2 APPPATH\Models\SaleModel.php(59): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Penjualan.php(47): App\Models\SaleModel->updateData([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-06 00:09:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE kode_penjualan = '1984'' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            UPDATE sale
+                SET 
+            telp = \'083125891431\',
+            customer_name = \'Ahmad\',
+            total_product = \'80000\',
+            total_service = \'20000\',
+            total_price = \'100000\',
+            id_employe = \'1\',
+            status = \'selesai\',
+                WHERE kode_penjualan = \'1984\'
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            UPDATE sale
+                SET 
+            telp = \'083125891431\',
+            customer_name = \'Ahmad\',
+            total_product = \'80000\',
+            total_service = \'20000\',
+            total_price = \'100000\',
+            id_employe = \'1\',
+            status = \'selesai\',
+                WHERE kode_penjualan = \'1984\'
+        ')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('
+            UPDATE sale
+                SET 
+            telp = \'083125891431\',
+            customer_name = \'Ahmad\',
+            total_product = \'80000\',
+            total_service = \'20000\',
+            total_price = \'100000\',
+            id_employe = \'1\',
+            status = \'selesai\',
+                WHERE kode_penjualan = \'1984\'
+        ')
+ 4 APPPATH\Models\SaleModel.php(59): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Penjualan.php(47): App\Models\SaleModel->updateData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-06 00:09:02 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE kode_penjualan = '1984'' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('
+            UPDATE sale
+                SET 
+            telp = \'083125891431\',
+            customer_name = \'Ahmad\',
+            total_product = \'80000\',
+            total_service = \'20000\',
+            total_price = \'100000\',
+            id_employe = \'1\',
+            status = \'selesai\',
+                WHERE kode_penjualan = \'1984\'
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('
+            UPDATE sale
+                SET 
+            telp = \'083125891431\',
+            customer_name = \'Ahmad\',
+            total_product = \'80000\',
+            total_service = \'20000\',
+            total_price = \'100000\',
+            id_employe = \'1\',
+            status = \'selesai\',
+                WHERE kode_penjualan = \'1984\'
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('
+            UPDATE sale
+                SET 
+            telp = \'083125891431\',
+            customer_name = \'Ahmad\',
+            total_product = \'80000\',
+            total_service = \'20000\',
+            total_price = \'100000\',
+            id_employe = \'1\',
+            status = \'selesai\',
+                WHERE kode_penjualan = \'1984\'
+        ')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('
+            UPDATE sale
+                SET 
+            telp = \'083125891431\',
+            customer_name = \'Ahmad\',
+            total_product = \'80000\',
+            total_service = \'20000\',
+            total_price = \'100000\',
+            id_employe = \'1\',
+            status = \'selesai\',
+                WHERE kode_penjualan = \'1984\'
+        ')
+ 5 APPPATH\Models\SaleModel.php(59): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Penjualan.php(47): App\Models\SaleModel->updateData([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 00:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 00:34:25 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: kasir]
+in APPPATH\Views\Owner\Kasir\index.php on line 45.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Kasir/index', [], true)
+ 4 APPPATH\Controllers\Owner\Kasir.php(53): view('Owner/Kasir/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Kasir->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 00:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 00:36:00 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: kasir]
+in APPPATH\Views\Owner\Kasir\index.php on line 45.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Kasir/index', [], true)
+ 4 APPPATH\Controllers\Owner\Kasir.php(54): view('Owner/Kasir/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Kasir->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 00:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 00:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 03:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 04:18:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 04:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 04:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 04:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 04:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 04:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 04:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 04:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 04:24:44 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: pelanggan-umum]
+in APPPATH\Views\Owner\GeneralCustomer\index.php on line 32.
+ 1 APPPATH\Views\Owner\GeneralCustomer\index.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\index.php', 32)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/GeneralCustomer/index', [], true)
+ 5 APPPATH\Controllers\Owner\GeneralCustomer.php(22): view('Owner/GeneralCustomer/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 04:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 06:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-06 07:02:38 --> mysqli_sql_exception: Column 'telp' in field list is ambiguous in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT customer...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT customer...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT customer...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT customer...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\SaleModel.php(79): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\GeneralCustomer.php(27): App\Models\SaleModel->getDataPenjualanInnerJoinSaleDetailForBookingOffline('3130')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('3130')
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-06 07:02:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'telp' in field list is ambiguous
+[Method: GET, Route: pelanggan-umum/3130]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT customer_name, telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 2 APPPATH\Models\SaleModel.php(79): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\GeneralCustomer.php(27): App\Models\SaleModel->getDataPenjualanInnerJoinSaleDetailForBookingOffline('3130')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('3130')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-06 07:02:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'telp' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT customer_name, telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT customer_name, telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT customer_name, telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 4 APPPATH\Models\SaleModel.php(79): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\GeneralCustomer.php(27): App\Models\SaleModel->getDataPenjualanInnerJoinSaleDetailForBookingOffline('3130')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('3130')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-06 07:02:38 --> [Caused by] mysqli_sql_exception: Column 'telp' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT customer_name, telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT customer_name, telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT customer_name, telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT customer_name, telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 5 APPPATH\Models\SaleModel.php(79): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\GeneralCustomer.php(27): App\Models\SaleModel->getDataPenjualanInnerJoinSaleDetailForBookingOffline('3130')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('3130')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 07:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-06 07:03:06 --> mysqli_sql_exception: Unknown column 'employe.id' in 'on clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT customer...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT customer...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT customer...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT customer...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\SaleModel.php(79): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\GeneralCustomer.php(27): App\Models\SaleModel->getDataPenjualanInnerJoinSaleDetailForBookingOffline('3130')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('3130')
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-06 07:03:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'employe.id' in 'on clause'
+[Method: GET, Route: pelanggan-umum/3130]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT customer_name, sale.telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 2 APPPATH\Models\SaleModel.php(79): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\GeneralCustomer.php(27): App\Models\SaleModel->getDataPenjualanInnerJoinSaleDetailForBookingOffline('3130')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('3130')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-06 07:03:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'employe.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT customer_name, sale.telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT customer_name, sale.telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT customer_name, sale.telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 4 APPPATH\Models\SaleModel.php(79): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\GeneralCustomer.php(27): App\Models\SaleModel->getDataPenjualanInnerJoinSaleDetailForBookingOffline('3130')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('3130')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-06 07:03:06 --> [Caused by] mysqli_sql_exception: Unknown column 'employe.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT customer_name, sale.telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT customer_name, sale.telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT customer_name, sale.telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT customer_name, sale.telp, total_product, total_price, total_service, product_price, product, qty, name, sub_total FROM sale INNER JOIN sale_detail ON sale.kode_penjualan = sale_detail.kode_penjualan INNER JOIN employes ON sale.id_employe = employe.id WHERE sale.kode_penjualan = \'3130\'')
+ 5 APPPATH\Models\SaleModel.php(79): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\GeneralCustomer.php(27): App\Models\SaleModel->getDataPenjualanInnerJoinSaleDetailForBookingOffline('3130')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('3130')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 07:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 07:05:23 --> ErrorException: Undefined array key "kode_penjualan"
+[Method: GET, Route: pelanggan-umum/1984]
+in APPPATH\Views\Owner\GeneralCustomer\detail.php on line 37.
+ 1 APPPATH\Views\Owner\GeneralCustomer\detail.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_penjualan"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\detail.php', 37)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/GeneralCustomer/detail', [], true)
+ 5 APPPATH\Controllers\Owner\GeneralCustomer.php(28): view('Owner/GeneralCustomer/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('1984')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 07:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 07:25:42 --> ErrorException: Undefined variable $sale
+[Method: GET, Route: pelanggan-umum/1984]
+in APPPATH\Views\Owner\GeneralCustomer\detail.php on line 39.
+ 1 APPPATH\Views\Owner\GeneralCustomer\detail.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sale', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\detail.php', 39)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/GeneralCustomer/detail', [], true)
+ 5 APPPATH\Controllers\Owner\GeneralCustomer.php(28): view('Owner/GeneralCustomer/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('1984')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 07:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 07:26:18 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+[Method: GET, Route: pelanggan-umum/1984]
+in APPPATH\Views\Owner\GeneralCustomer\detail.php on line 39.
+ 1 APPPATH\Views\Owner\GeneralCustomer\detail.php(39): number_format('gema maulana')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/GeneralCustomer/detail', [], true)
+ 5 APPPATH\Controllers\Owner\GeneralCustomer.php(28): view('Owner/GeneralCustomer/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('1984')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 07:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 07:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 13:26:23 --> ErrorException: Undefined variable $i
+[Method: GET, Route: kasir]
+in APPPATH\Views\Owner\Kasir\index.php on line 43.
+ 1 APPPATH\Views\Owner\Kasir\index.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Kasir\\index.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Kasir\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Kasir/index', [], true)
+ 5 APPPATH\Controllers\Owner\Kasir.php(54): view('Owner/Kasir/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Kasir->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 13:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 13:26:39 --> ErrorException: Undefined variable $product
+[Method: GET, Route: kasir]
+in APPPATH\Views\Owner\Kasir\index.php on line 54.
+ 1 APPPATH\Views\Owner\Kasir\index.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Kasir\\index.php', 54)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Kasir\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Kasir/index', [], true)
+ 5 APPPATH\Controllers\Owner\Kasir.php(54): view('Owner/Kasir/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Kasir->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 13:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 13:30:41 --> ErrorException: Undefined array key "product"
+[Method: POST, Route: kasir]
+in APPPATH\Models\DetailSaleModel.php on line 36.
+ 1 APPPATH\Models\DetailSaleModel.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Models\\DetailSaleModel.php', 36)
+ 2 APPPATH\Controllers\Owner\Kasir.php(47): App\Models\DetailSaleModel->saveData([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Kasir->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Kasir))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 13:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 13:32:27 --> ErrorException: Undefined array key "qty"
+[Method: POST, Route: kasir]
+in APPPATH\Models\DetailSaleModel.php on line 38.
+ 1 APPPATH\Models\DetailSaleModel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "qty"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Models\\DetailSaleModel.php', 38)
+ 2 APPPATH\Controllers\Owner\Kasir.php(47): App\Models\DetailSaleModel->saveData([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Kasir->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Kasir))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 13:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 13:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 14:36:24 --> TypeError: Unsupported operand types: string + string
+[Method: POST, Route: kasir]
+in APPPATH\Controllers\Owner\Kasir.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Kasir->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Kasir))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 14:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 14:54:20 --> ErrorException: Undefined array key "kode_product"
+[Method: GET, Route: pelanggan-umum/6045]
+in APPPATH\Views\Owner\GeneralCustomer\detail.php on line 38.
+ 1 APPPATH\Views\Owner\GeneralCustomer\detail.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_product"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\detail.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/GeneralCustomer/detail', [], true)
+ 5 APPPATH\Controllers\Owner\GeneralCustomer.php(28): view('Owner/GeneralCustomer/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('6045')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 14:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 14:56:16 --> ErrorException: Undefined array key "kode_product"
+[Method: GET, Route: pelanggan-umum/6045]
+in APPPATH\Views\Owner\GeneralCustomer\detail.php on line 38.
+ 1 APPPATH\Views\Owner\GeneralCustomer\detail.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_product"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\detail.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\GeneralCustomer\\detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/GeneralCustomer/detail', [], true)
+ 5 APPPATH\Controllers\Owner\GeneralCustomer.php(28): view('Owner/GeneralCustomer/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\GeneralCustomer->detail('6045')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\GeneralCustomer))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 14:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 14:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-06 15:18:37 --> ErrorException: Undefined array key "total"
+[Method: GET, Route: penjualan]
+in APPPATH\Views\Owner\Penjualan\index.php on line 41.
+ 1 APPPATH\Views\Owner\Penjualan\index.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Penjualan/index', [], true)
+ 5 APPPATH\Controllers\Owner\Penjualan.php(22): view('Owner/Penjualan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-06 15:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:23:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:24:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:24:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 15:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 16:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 16:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 16:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 16:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 16:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 16:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-06 16:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

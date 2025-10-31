@@ -1,0 +1,68 @@
+.fs-1{
+    font-size: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+
+.input-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Tombol tambah dan kurang */
+.input-cart button {
+    background-color: #007bff; /* Warna biru */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-cart button:hover {
+    background-color: #0056b3; /* Biru lebih gelap saat hover */
+}
+
+.input-cart button:active {
+    background-color: #003f7f; /* Biru lebih gelap saat ditekan */
+}
+
+/* Input untuk menampilkan nilai */
+.input-cart input {
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Membuat input hanya-baca terlihat lebih rapi */
+.input-cart input[readonly] {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.d-block-me{
+    display: block !important;
+}
+
+.d-none-me{
+    display: none !important;
+}
+
+@media (max-width: 992px){
+    .d-p-none{
+        display: none !important;
+    }
+}

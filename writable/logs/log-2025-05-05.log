@@ -1,0 +1,957 @@
+INFO - 2025-05-05 01:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 01:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 01:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 01:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 01:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 01:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 01:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 01:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 01:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-05 01:51:29 --> mysqli_sql_exception: Unknown column 'purchase.kode_product' in 'field list' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `purchas...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purchas...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purchas...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `purchas...', Array, false)
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Hutang.php(24): App\Models\PembelianModel->getAllDataByStatusPembayaran('belum lunas')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-05 01:51:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'purchase.kode_product' in 'field list'
+[Method: GET, Route: hutang]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `purchase`.`kode_product`, `status_bayar`, `name`, `purchase`.`supplier`, `purchase`.`price_buy`, `purchase`.`qty`, `date_in`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `products` ON `purchase`.`kode_product` = `products`.`kode_product`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = :purchase.status_bayar:
+GROUP BY `purchase`.`kode_pembelian`', [...], false)
+ 2 APPPATH\Models\PembelianModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Owner\Hutang.php(24): App\Models\PembelianModel->getAllDataByStatusPembayaran('belum lunas')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 01:51:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'purchase.kode_product' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `purchase`.`kode_product`, `status_bayar`, `name`, `purchase`.`supplier`, `purchase`.`price_buy`, `purchase`.`qty`, `date_in`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `products` ON `purchase`.`kode_product` = `products`.`kode_product`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = \'belum lunas\'
+GROUP BY `purchase`.`kode_pembelian`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `purchase`.`kode_product`, `status_bayar`, `name`, `purchase`.`supplier`, `purchase`.`price_buy`, `purchase`.`qty`, `date_in`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `products` ON `purchase`.`kode_product` = `products`.`kode_product`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = \'belum lunas\'
+GROUP BY `purchase`.`kode_pembelian`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `purchase`.`kode_product`, `status_bayar`, `name`, `purchase`.`supplier`, `purchase`.`price_buy`, `purchase`.`qty`, `date_in`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `products` ON `purchase`.`kode_product` = `products`.`kode_product`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = :purchase.status_bayar:
+GROUP BY `purchase`.`kode_pembelian`', [...], false)
+ 4 APPPATH\Models\PembelianModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Owner\Hutang.php(24): App\Models\PembelianModel->getAllDataByStatusPembayaran('belum lunas')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 01:51:29 --> [Caused by] mysqli_sql_exception: Unknown column 'purchase.kode_product' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `purchase`.`kode_product`, `status_bayar`, `name`, `purchase`.`supplier`, `purchase`.`price_buy`, `purchase`.`qty`, `date_in`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `products` ON `purchase`.`kode_product` = `products`.`kode_product`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = \'belum lunas\'
+GROUP BY `purchase`.`kode_pembelian`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `purchase`.`kode_product`, `status_bayar`, `name`, `purchase`.`supplier`, `purchase`.`price_buy`, `purchase`.`qty`, `date_in`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `products` ON `purchase`.`kode_product` = `products`.`kode_product`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = \'belum lunas\'
+GROUP BY `purchase`.`kode_pembelian`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `purchase`.`kode_product`, `status_bayar`, `name`, `purchase`.`supplier`, `purchase`.`price_buy`, `purchase`.`qty`, `date_in`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `products` ON `purchase`.`kode_product` = `products`.`kode_product`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = \'belum lunas\'
+GROUP BY `purchase`.`kode_pembelian`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `purchase`.`kode_product`, `status_bayar`, `name`, `purchase`.`supplier`, `purchase`.`price_buy`, `purchase`.`qty`, `date_in`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `products` ON `purchase`.`kode_product` = `products`.`kode_product`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = :purchase.status_bayar:
+GROUP BY `purchase`.`kode_pembelian`', [...], false)
+ 5 APPPATH\Models\PembelianModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Owner\Hutang.php(24): App\Models\PembelianModel->getAllDataByStatusPembayaran('belum lunas')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 01:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-05 01:55:47 --> mysqli_sql_exception: Unknown column 'purchase.qty' in 'field list' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `purchas...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purchas...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purchas...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `purchas...', Array, false)
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Hutang.php(24): App\Models\PembelianModel->getAllDataByStatusPembayaran('belum lunas')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-05 01:55:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'purchase.qty' in 'field list'
+[Method: GET, Route: hutang]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `status_bayar`, `name`, `purchase`.`total`, `purchase`.`qty`, `purchase`.`created_at`, `purchase`.`updated_at`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `suppliers` ON `purchase`.`supplier` = `suppliers`.`id`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = :purchase.status_bayar:
+GROUP BY `purchase`.`kode_pembelian`', [...], false)
+ 2 APPPATH\Models\PembelianModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Owner\Hutang.php(24): App\Models\PembelianModel->getAllDataByStatusPembayaran('belum lunas')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 01:55:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'purchase.qty' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `status_bayar`, `name`, `purchase`.`total`, `purchase`.`qty`, `purchase`.`created_at`, `purchase`.`updated_at`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `suppliers` ON `purchase`.`supplier` = `suppliers`.`id`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = \'belum lunas\'
+GROUP BY `purchase`.`kode_pembelian`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `status_bayar`, `name`, `purchase`.`total`, `purchase`.`qty`, `purchase`.`created_at`, `purchase`.`updated_at`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `suppliers` ON `purchase`.`supplier` = `suppliers`.`id`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = \'belum lunas\'
+GROUP BY `purchase`.`kode_pembelian`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `status_bayar`, `name`, `purchase`.`total`, `purchase`.`qty`, `purchase`.`created_at`, `purchase`.`updated_at`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `suppliers` ON `purchase`.`supplier` = `suppliers`.`id`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = :purchase.status_bayar:
+GROUP BY `purchase`.`kode_pembelian`', [...], false)
+ 4 APPPATH\Models\PembelianModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Owner\Hutang.php(24): App\Models\PembelianModel->getAllDataByStatusPembayaran('belum lunas')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 01:55:47 --> [Caused by] mysqli_sql_exception: Unknown column 'purchase.qty' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `status_bayar`, `name`, `purchase`.`total`, `purchase`.`qty`, `purchase`.`created_at`, `purchase`.`updated_at`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `suppliers` ON `purchase`.`supplier` = `suppliers`.`id`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = \'belum lunas\'
+GROUP BY `purchase`.`kode_pembelian`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `status_bayar`, `name`, `purchase`.`total`, `purchase`.`qty`, `purchase`.`created_at`, `purchase`.`updated_at`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `suppliers` ON `purchase`.`supplier` = `suppliers`.`id`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = \'belum lunas\'
+GROUP BY `purchase`.`kode_pembelian`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `status_bayar`, `name`, `purchase`.`total`, `purchase`.`qty`, `purchase`.`created_at`, `purchase`.`updated_at`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `suppliers` ON `purchase`.`supplier` = `suppliers`.`id`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = \'belum lunas\'
+GROUP BY `purchase`.`kode_pembelian`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `purchase`.`id`, `purchase`.`kode_pembelian`, `status_bayar`, `name`, `purchase`.`total`, `purchase`.`qty`, `purchase`.`created_at`, `purchase`.`updated_at`, SUM(paid_off) AS terbayar
+FROM `purchase`
+JOIN `suppliers` ON `purchase`.`supplier` = `suppliers`.`id`
+JOIN `paid` ON `purchase`.`kode_pembelian` = `paid`.`kode_pembelian`
+WHERE `purchase`.`status_bayar` = :purchase.status_bayar:
+GROUP BY `purchase`.`kode_pembelian`', [...], false)
+ 5 APPPATH\Models\PembelianModel.php(93): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Owner\Hutang.php(24): App\Models\PembelianModel->getAllDataByStatusPembayaran('belum lunas')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 01:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 01:56:21 --> ErrorException: Undefined array key "supplier"
+[Method: GET, Route: hutang]
+in APPPATH\Views\Owner\Hutang\index.php on line 42.
+ 1 APPPATH\Views\Owner\Hutang\index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "supplier"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Hutang\\index.php', 42)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Hutang\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Hutang/index', [], true)
+ 5 APPPATH\Controllers\Owner\Hutang.php(26): view('Owner/Hutang/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 01:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 01:57:01 --> ErrorException: Undefined array key "price_buy"
+[Method: GET, Route: hutang]
+in APPPATH\Views\Owner\Hutang\index.php on line 43.
+ 1 APPPATH\Views\Owner\Hutang\index.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "price_buy"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Hutang\\index.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Hutang\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Hutang/index', [], true)
+ 5 APPPATH\Controllers\Owner\Hutang.php(26): view('Owner/Hutang/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 01:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 01:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 02:01:29 --> Error: Undefined constant "Rp"
+[Method: GET, Route: hutang]
+in APPPATH\Views\Owner\Hutang\index.php on line 42.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Hutang/index', [], true)
+ 4 APPPATH\Controllers\Owner\Hutang.php(26): view('Owner/Hutang/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 02:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-05 02:02:19 --> mysqli_sql_exception: Unknown column 'purchase.qty' in 'field list' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-05 02:02:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'purchase.qty' in 'field list'
+[Method: GET, Route: pembayaranhutang/9/8185]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, purchase.qty, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 2 APPPATH\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 02:02:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'purchase.qty' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, purchase.qty, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, purchase.qty, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, purchase.qty, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 4 APPPATH\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 02:02:19 --> [Caused by] mysqli_sql_exception: Unknown column 'purchase.qty' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase.id, purchase.qty, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, purchase.qty, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, purchase.qty, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, purchase.qty, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 5 APPPATH\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 02:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-05 02:06:59 --> mysqli_sql_exception: Unknown column 'purchase.kode_product' in 'field list' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-05 02:06:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'purchase.kode_product' in 'field list'
+[Method: GET, Route: pembayaranhutang/9/8185]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 2 APPPATH\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 02:06:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'purchase.kode_product' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 4 APPPATH\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 02:06:59 --> [Caused by] mysqli_sql_exception: Unknown column 'purchase.kode_product' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase.id, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, purchase.kode_product, name, status_bayar, purchase.supplier, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN products ON purchase.kode_product = products.kode_product INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 5 APPPATH\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 02:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-05 02:08:21 --> mysqli_sql_exception: Unknown column 'supplier.id' in 'on clause' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-05 02:08:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'supplier.id' in 'on clause'
+[Method: GET, Route: pembayaranhutang/9/8185]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, name, status_bayar, purchase.supplier AS supplier_name, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN suppliers ON purchase.supplier = supplier.id INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 2 APPPATH\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 02:08:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'supplier.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, name, status_bayar, purchase.supplier AS supplier_name, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN suppliers ON purchase.supplier = supplier.id INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, name, status_bayar, purchase.supplier AS supplier_name, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN suppliers ON purchase.supplier = supplier.id INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, name, status_bayar, purchase.supplier AS supplier_name, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN suppliers ON purchase.supplier = supplier.id INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 4 APPPATH\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 02:08:21 --> [Caused by] mysqli_sql_exception: Unknown column 'supplier.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT purchase.id, name, status_bayar, purchase.supplier AS supplier_name, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN suppliers ON purchase.supplier = supplier.id INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT purchase.id, name, status_bayar, purchase.supplier AS supplier_name, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN suppliers ON purchase.supplier = supplier.id INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT purchase.id, name, status_bayar, purchase.supplier AS supplier_name, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN suppliers ON purchase.supplier = supplier.id INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT purchase.id, name, status_bayar, purchase.supplier AS supplier_name, purchase.total AS price_buy, paid_off, purchase.kode_pembelian, paid.created_at FROM purchase INNER JOIN suppliers ON purchase.supplier = supplier.id INNER JOIN paid ON purchase.kode_pembelian = paid.kode_pembelian WHERE purchase.kode_pembelian = \'8185\'')
+ 5 APPPATH\Models\PembelianModel.php(105): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Hutang.php(31): App\Models\PembelianModel->getDataByKodePembelianInnerJoinProduct('8185')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 02:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 02:08:38 --> ErrorException: Undefined array key "supplier"
+[Method: GET, Route: pembayaranhutang/9/8185]
+in APPPATH\Views\Owner\Hutang\bayar.php on line 63.
+ 1 APPPATH\Views\Owner\Hutang\bayar.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "supplier"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Hutang\\bayar.php', 63)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Hutang\\bayar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Hutang/bayar', [], true)
+ 5 APPPATH\Controllers\Owner\Hutang.php(49): view('Owner/Hutang/bayar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 02:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:09:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 02:09:39 --> ErrorException: Undefined array key "price_buy"
+[Method: POST, Route: pembayaranhutang/9/8185]
+in APPPATH\Controllers\Owner\Hutang.php on line 38.
+ 1 APPPATH\Controllers\Owner\Hutang.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "price_buy"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Controllers\\Owner\\Hutang.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Hutang->pembayaranhutang('9', '8185')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Hutang))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 02:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-05 02:20:09 --> mysqli_sql_exception: Column 'name' in field list is ambiguous in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT products...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT products...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT products...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT products...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\ProductModel.php(83): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Product.php(87): App\Models\ProductModel->getAllDataInnerJoinSupplier()
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Product->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Product))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-05 02:20:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' in field list is ambiguous
+[Method: GET, Route: produk]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT products.id, suppliers.name AS supplier, name, kode_product, qty, price_buy, price_sale, image FROM products INNER JOIN suppliers ON products.supplier = suppliers.id')
+ 2 APPPATH\Models\ProductModel.php(83): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Owner\Product.php(87): App\Models\ProductModel->getAllDataInnerJoinSupplier()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 02:20:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT products.id, suppliers.name AS supplier, name, kode_product, qty, price_buy, price_sale, image FROM products INNER JOIN suppliers ON products.supplier = suppliers.id')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT products.id, suppliers.name AS supplier, name, kode_product, qty, price_buy, price_sale, image FROM products INNER JOIN suppliers ON products.supplier = suppliers.id')
+ 3 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT products.id, suppliers.name AS supplier, name, kode_product, qty, price_buy, price_sale, image FROM products INNER JOIN suppliers ON products.supplier = suppliers.id')
+ 4 APPPATH\Models\ProductModel.php(83): CodeIgniter\Model->__call('query', [...])
+ 5 APPPATH\Controllers\Owner\Product.php(87): App\Models\ProductModel->getAllDataInnerJoinSupplier()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Product->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 02:20:09 --> [Caused by] mysqli_sql_exception: Column 'name' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT products.id, suppliers.name AS supplier, name, kode_product, qty, price_buy, price_sale, image FROM products INNER JOIN suppliers ON products.supplier = suppliers.id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT products.id, suppliers.name AS supplier, name, kode_product, qty, price_buy, price_sale, image FROM products INNER JOIN suppliers ON products.supplier = suppliers.id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT products.id, suppliers.name AS supplier, name, kode_product, qty, price_buy, price_sale, image FROM products INNER JOIN suppliers ON products.supplier = suppliers.id')
+ 4 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT products.id, suppliers.name AS supplier, name, kode_product, qty, price_buy, price_sale, image FROM products INNER JOIN suppliers ON products.supplier = suppliers.id')
+ 5 APPPATH\Models\ProductModel.php(83): CodeIgniter\Model->__call('query', [...])
+ 6 APPPATH\Controllers\Owner\Product.php(87): App\Models\ProductModel->getAllDataInnerJoinSupplier()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 02:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 02:20:36 --> ErrorException: Undefined array key "categori"
+[Method: GET, Route: produk]
+in APPPATH\Views\Owner\Produk\index.php on line 106.
+ 1 APPPATH\Views\Owner\Produk\index.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "categori"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Produk\\index.php', 106)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Produk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Produk/index', [], true)
+ 5 APPPATH\Controllers\Owner\Product.php(90): view('Owner/Produk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Product->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 02:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 02:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 03:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 04:32:18 --> ErrorException: Undefined array key "kode_product"
+[Method: POST, Route: pemesanan]
+in APPPATH\Controllers\Owner\Pemesanan.php on line 35.
+ 1 APPPATH\Controllers\Owner\Pemesanan.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_product"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Controllers\\Owner\\Pemesanan.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pemesanan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 04:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 04:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 05:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 05:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 05:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 05:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 05:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 05:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 05:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 06:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 07:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 07:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 07:26:31 --> BadMethodCallException: Call to undefined method App\Models\SaleModel::getAllDataByStatusPenjualan
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Owner\Penjualan.php(21): CodeIgniter\Model->__call('getAllDataByStatusPenjualan', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 07:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 07:36:23 --> BadMethodCallException: Call to undefined method App\Models\SaleModel::getAllDataByStatusPenjualan
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Owner\Penjualan.php(21): CodeIgniter\Model->__call('getAllDataByStatusPenjualan', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 07:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 07:36:31 --> BadMethodCallException: Call to undefined method App\Models\SaleModel::getAllDataByStatusPenjualan
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Owner\Penjualan.php(21): CodeIgniter\Model->__call('getAllDataByStatusPenjualan', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 07:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 07:36:42 --> BadMethodCallException: Call to undefined method App\Models\SaleModel::getAllDataByStatusPenjualan
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Owner\Penjualan.php(21): CodeIgniter\Model->__call('getAllDataByStatusPenjualan', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 07:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 07:36:45 --> BadMethodCallException: Call to undefined method App\Models\SaleModel::getAllDataByStatusPenjualan
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Owner\Penjualan.php(21): CodeIgniter\Model->__call('getAllDataByStatusPenjualan', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 11:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 11:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 11:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 11:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 11:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 11:04:14 --> ErrorException: Undefined variable $carts
+[Method: GET, Route: penjualan]
+in APPPATH\Views\Owner\Penjualan\index.php on line 74.
+ 1 APPPATH\Views\Owner\Penjualan\index.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $carts', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php', 74)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Penjualan/index', [], true)
+ 5 APPPATH\Controllers\Owner\Penjualan.php(26): view('Owner/Penjualan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 11:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 11:08:38 --> ErrorException: Undefined variable $carts
+[Method: GET, Route: penjualan]
+in APPPATH\Views\Owner\Penjualan\index.php on line 72.
+ 1 APPPATH\Views\Owner\Penjualan\index.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $carts', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php', 72)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Penjualan/index', [], true)
+ 5 APPPATH\Controllers\Owner\Penjualan.php(26): view('Owner/Penjualan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 11:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 11:09:08 --> ErrorException: foreach() argument must be of type array|object, int given
+[Method: GET, Route: penjualan]
+in APPPATH\Views\Owner\Penjualan\index.php on line 72.
+ 1 APPPATH\Views\Owner\Penjualan\index.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, int given', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php', 72)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Penjualan/index', [], true)
+ 5 APPPATH\Controllers\Owner\Penjualan.php(27): view('Owner/Penjualan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 11:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 11:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 11:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:33:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 20:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:23:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-05 21:25:32 --> mysqli_sql_exception: Unknown column 'kode_product' in 'field list' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\DetailSaleModel.php(38): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Penjualan.php(36): App\Models\DetailSaleModel->saveData(Array)
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+#12 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-05-05 21:25:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_product' in 'field list'
+[Method: POST, Route: penjualan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (:kode_penjualan:, :kode_product:, :product:, :product_price:, :sub_total:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Models\DetailSaleModel.php(38): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Owner\Penjualan.php(36): App\Models\DetailSaleModel->saveData([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 21:25:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_product' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (\'5884\', \'9924\', \'oli mesin yamalube sport 1l\', \'50000\', \'100000\', \'2025-05-05 21:25:31\', \'2025-05-05 21:25:31\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (\'5884\', \'9924\', \'oli mesin yamalube sport 1l\', \'50000\', \'100000\', \'2025-05-05 21:25:31\', \'2025-05-05 21:25:31\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (:kode_penjualan:, :kode_product:, :product:, :product_price:, :sub_total:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Models\DetailSaleModel.php(38): CodeIgniter\BaseModel->save([...])
+ 9 APPPATH\Controllers\Owner\Penjualan.php(36): App\Models\DetailSaleModel->saveData([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 21:25:32 --> [Caused by] mysqli_sql_exception: Unknown column 'kode_product' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (\'5884\', \'9924\', \'oli mesin yamalube sport 1l\', \'50000\', \'100000\', \'2025-05-05 21:25:31\', \'2025-05-05 21:25:31\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (\'5884\', \'9924\', \'oli mesin yamalube sport 1l\', \'50000\', \'100000\', \'2025-05-05 21:25:31\', \'2025-05-05 21:25:31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (\'5884\', \'9924\', \'oli mesin yamalube sport 1l\', \'50000\', \'100000\', \'2025-05-05 21:25:31\', \'2025-05-05 21:25:31\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (:kode_penjualan:, :kode_product:, :product:, :product_price:, :sub_total:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Models\DetailSaleModel.php(38): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\Owner\Penjualan.php(36): App\Models\DetailSaleModel->saveData([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 21:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 21:25:42 --> ErrorException: Undefined array key "product"
+[Method: GET, Route: penjualan]
+in APPPATH\Views\Owner\Penjualan\index.php on line 84.
+ 1 APPPATH\Views\Owner\Penjualan\index.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php', 84)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Penjualan/index', [], true)
+ 5 APPPATH\Controllers\Owner\Penjualan.php(40): view('Owner/Penjualan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 21:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-05 21:35:26 --> mysqli_sql_exception: Unknown column 'kode_product' in 'field list' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\DetailSaleModel.php(38): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Penjualan.php(36): App\Models\DetailSaleModel->saveData(Array)
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+#12 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-05-05 21:35:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_product' in 'field list'
+[Method: POST, Route: penjualan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (:kode_penjualan:, :kode_product:, :product:, :product_price:, :sub_total:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Models\DetailSaleModel.php(38): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Owner\Penjualan.php(36): App\Models\DetailSaleModel->saveData([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 21:35:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode_product' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (\'9191\', \'9924\', \'oli mesin yamalube sport 1l\', \'50000\', \'50000\', \'2025-05-05 21:35:26\', \'2025-05-05 21:35:26\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (\'9191\', \'9924\', \'oli mesin yamalube sport 1l\', \'50000\', \'50000\', \'2025-05-05 21:35:26\', \'2025-05-05 21:35:26\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (:kode_penjualan:, :kode_product:, :product:, :product_price:, :sub_total:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Models\DetailSaleModel.php(38): CodeIgniter\BaseModel->save([...])
+ 9 APPPATH\Controllers\Owner\Penjualan.php(36): App\Models\DetailSaleModel->saveData([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-05 21:35:26 --> [Caused by] mysqli_sql_exception: Unknown column 'kode_product' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (\'9191\', \'9924\', \'oli mesin yamalube sport 1l\', \'50000\', \'50000\', \'2025-05-05 21:35:26\', \'2025-05-05 21:35:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (\'9191\', \'9924\', \'oli mesin yamalube sport 1l\', \'50000\', \'50000\', \'2025-05-05 21:35:26\', \'2025-05-05 21:35:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (\'9191\', \'9924\', \'oli mesin yamalube sport 1l\', \'50000\', \'50000\', \'2025-05-05 21:35:26\', \'2025-05-05 21:35:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale` (`kode_penjualan`, `kode_product`, `product`, `product_price`, `sub_total`, `created_at`, `updated_at`) VALUES (:kode_penjualan:, :kode_product:, :product:, :product_price:, :sub_total:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Models\DetailSaleModel.php(38): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\Owner\Penjualan.php(36): App\Models\DetailSaleModel->saveData([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 21:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 21:36:17 --> ErrorException: Undefined array key "qty"
+[Method: GET, Route: penjualan]
+in APPPATH\Views\Owner\Penjualan\index.php on line 85.
+ 1 APPPATH\Views\Owner\Penjualan\index.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "qty"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php', 85)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Penjualan/index', [], true)
+ 5 APPPATH\Controllers\Owner\Penjualan.php(40): view('Owner/Penjualan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 21:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 21:38:00 --> ErrorException: Undefined array key "price_buy"
+[Method: GET, Route: penjualan]
+in APPPATH\Views\Owner\Penjualan\index.php on line 95.
+ 1 APPPATH\Views\Owner\Penjualan\index.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "price_buy"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php', 95)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Penjualan\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Penjualan/index', [], true)
+ 5 APPPATH\Controllers\Owner\Penjualan.php(40): view('Owner/Penjualan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-05 21:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:40:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 21:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-05 23:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,552 @@
+INFO - 2025-05-01 00:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 00:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 00:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 00:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 00:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 00:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 00:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-01 02:40:22 --> ErrorException: Undefined variable $suppliers
+[Method: GET, Route: pembelian]
+in APPPATH\Views\Owner\Pembelian\index.php on line 69.
+ 1 APPPATH\Views\Owner\Pembelian\index.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $suppliers', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Pembelian\\index.php', 69)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Pembelian\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Pembelian/index', [], true)
+ 5 APPPATH\Controllers\Owner\Pembelian.php(66): view('Owner/Pembelian/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 02:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 02:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-01 03:18:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Owner/Pembelian/beli.php"
+[Method: PUT, Route: pembelian/2]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Owner/Pembelian/beli.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Pembelian/beli', [], true)
+ 3 APPPATH\Controllers\Owner\Pembelian.php(35): view('Owner/Pembelian/beli', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->beli('2')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 03:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-01 03:20:48 --> ErrorException: Undefined variable $suppliers
+[Method: PUT, Route: pembelian/3]
+in APPPATH\Views\Owner\Pembelian\beli.php on line 80.
+ 1 APPPATH\Views\Owner\Pembelian\beli.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $suppliers', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Pembelian\\beli.php', 80)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Pembelian\\beli.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Pembelian/beli', [], true)
+ 5 APPPATH\Controllers\Owner\Pembelian.php(35): view('Owner/Pembelian/beli', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->beli('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 03:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:22:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:25:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:31:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-01 03:32:14 --> ErrorException: Undefined array key "datein"
+[Method: PUT, Route: pembelian/2]
+in APPPATH\Views\Owner\Pembelian\beli.php on line 50.
+ 1 APPPATH\Views\Owner\Pembelian\beli.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datein"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Pembelian\\beli.php', 50)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Pembelian\\beli.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Pembelian/beli', [], true)
+ 5 APPPATH\Controllers\Owner\Pembelian.php(35): view('Owner/Pembelian/beli', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->beli('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 03:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-01 03:41:12 --> ErrorException: Undefined array key "date_in"
+[Method: POST, Route: pembelian/2]
+in APPPATH\Models\ProductInModel.php on line 45.
+ 1 APPPATH\Models\ProductInModel.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "date_in"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Models\\ProductInModel.php', 45)
+ 2 APPPATH\Controllers\Owner\Pembelian.php(39): App\Models\ProductInModel->updateData([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->prosesBeli('2')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 03:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-01 03:41:45 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `product...', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\BaseModel.php(749): CodeIgniter\Model->update('2', Array)
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\ProductInModel.php(43): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Owner\Pembelian.php(39): App\Models\ProductInModel->updateData(Array)
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->prosesBeli('2')
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+#12 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2025-05-01 03:41:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: pembelian/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `products_in` SET `date_in` = :date_in:, `supplier` = :supplier:, `kode_product` = :kode_product:, `updated_at` = :updated_at:
+WHERE `products_in`.`id` IN :products_in.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Models\ProductInModel.php(43): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Owner\Pembelian.php(39): App\Models\ProductInModel->updateData([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->prosesBeli('2')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 03:41:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `products_in` SET `date_in` = \'2025-05-01\', `supplier` = \'pt indohebat\', `kode_product` = \'5295\', `updated_at` = \'2025-05-01 03:41:45\'
+WHERE `products_in`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `products_in` SET `date_in` = \'2025-05-01\', `supplier` = \'pt indohebat\', `kode_product` = \'5295\', `updated_at` = \'2025-05-01 03:41:45\'
+WHERE `products_in`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `products_in` SET `date_in` = :date_in:, `supplier` = :supplier:, `kode_product` = :kode_product:, `updated_at` = :updated_at:
+WHERE `products_in`.`id` IN :products_in.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('2', [...])
+ 8 APPPATH\Models\ProductInModel.php(43): CodeIgniter\BaseModel->save([...])
+ 9 APPPATH\Controllers\Owner\Pembelian.php(39): App\Models\ProductInModel->updateData([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->prosesBeli('2')
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-01 03:41:45 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `products_in` SET `date_in` = \'2025-05-01\', `supplier` = \'pt indohebat\', `kode_product` = \'5295\', `updated_at` = \'2025-05-01 03:41:45\'
+WHERE `products_in`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `products_in` SET `date_in` = \'2025-05-01\', `supplier` = \'pt indohebat\', `kode_product` = \'5295\', `updated_at` = \'2025-05-01 03:41:45\'
+WHERE `products_in`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `products_in` SET `date_in` = \'2025-05-01\', `supplier` = \'pt indohebat\', `kode_product` = \'5295\', `updated_at` = \'2025-05-01 03:41:45\'
+WHERE `products_in`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `products_in` SET `date_in` = :date_in:, `supplier` = :supplier:, `kode_product` = :kode_product:, `updated_at` = :updated_at:
+WHERE `products_in`.`id` IN :products_in.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('2', [...])
+ 9 APPPATH\Models\ProductInModel.php(43): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\Owner\Pembelian.php(39): App\Models\ProductInModel->updateData([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->prosesBeli('2')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 03:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:43:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:43:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 03:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-01 04:02:41 --> ErrorException: Undefined array key "harga_beli"
+[Method: PUT, Route: pembelian/2]
+in APPPATH\Views\Owner\Pembelian\beli.php on line 56.
+ 1 APPPATH\Views\Owner\Pembelian\beli.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "harga_beli"', 'C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Pembelian\\beli.php', 56)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\User\\Downloads\\xampp\\htdocs\\sib\\app\\Views\\Owner\\Pembelian\\beli.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Owner/Pembelian/beli', [], true)
+ 5 APPPATH\Controllers\Owner\Pembelian.php(35): view('Owner/Pembelian/beli', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Owner\Pembelian->beli('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Owner\Pembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 04:03:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 04:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 05:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 05:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 05:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 11:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 11:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 11:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-01 11:10:30 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbsib', 3306, '', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-05-01 11:10:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users WHERE username = \'admin\'')
+ 3 APPPATH\Models\UserModel.php(28): CodeIgniter\Model->__call('query', [...])
+ 4 APPPATH\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 11:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 11:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-01 11:14:22 --> ErrorException: Maximum execution time of 120 seconds exceeded
+[Method: POST, Route: login]
+in SYSTEMPATH\Debug\Exceptions.php on line 209.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2025-05-01 11:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 11:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 11:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 11:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-01 11:16:09 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=6016 in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\Users\\User\\D...', 186)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbsib', 3306, '', 0)
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbsib', 3306, '', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-05-01 11:16:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users WHERE username = \'admin\'')
+ 3 APPPATH\Models\UserModel.php(28): CodeIgniter\Model->__call('query', [...])
+ 4 APPPATH\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 11:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 11:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 11:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-01 11:28:37 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=3636 in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\Users\\User\\D...', 186)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbsib', 3306, '', 0)
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbsib', 3306, '', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-05-01 11:28:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users WHERE username = \'admin\'')
+ 3 APPPATH\Models\UserModel.php(28): CodeIgniter\Model->__call('query', [...])
+ 4 APPPATH\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 11:29:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 11:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-01 11:31:08 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=3636 in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\Users\\User\\D...', 186)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbsib', 3306, '', 0)
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dbsib', 3306, '', 0)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\User\Downloads\xampp\htdocs\sib\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Downloads\xampp\htdocs\sib\system\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#3 C:\Users\User\Downloads\xampp\htdocs\sib\app\Models\UserModel.php(28): CodeIgniter\Model->__call('query', Array)
+#4 C:\Users\User\Downloads\xampp\htdocs\sib\app\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+#5 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(933): App\Controllers\Auth->index()
+#6 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\Users\User\Downloads\xampp\htdocs\sib\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\User\Downloads\xampp\htdocs\sib\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\User\Downloads\xampp\htdocs\sib\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-05-01 11:31:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Model.php(926): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users WHERE username = \'admin\'')
+ 3 APPPATH\Models\UserModel.php(28): CodeIgniter\Model->__call('query', [...])
+ 4 APPPATH\Controllers\Auth.php(51): App\Models\UserModel->getDataByUsername('admin')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-01 15:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 15:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-01 19:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
