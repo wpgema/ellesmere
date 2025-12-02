@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Portal Sistem Informasi Bengkel</title>
+    <title>Portal Sistem Informasi Kasir Percetakan</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="AdminLTE v4 | Dashboard" />
@@ -82,7 +82,7 @@
         <!--end::To the end-->
         <!--begin::Copyright-->
         <strong>
-          <a href="https://adminlte.io" class="text-decoration-none">Suhaimi Percetakan</a>.
+          <a href="https://adminlte.io" class="text-decoration-none">Pencatatan Kasir</a>.
         </strong>
         <!--end::Copyright-->
       </footer>

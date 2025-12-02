@@ -14,7 +14,7 @@ class ExpendituresModel extends Model{
 
     public function saveData($data){
         $this->save([
-            "type" => strtolower(htmlspecialchars($data["type"])),
+            "type" => htmlspecialchars($data["type"]),
             "description" => strtolower(htmlspecialchars($data["description"])),
             "date" => strtolower(htmlspecialchars($data["date"])),
             "amount" => strtolower(htmlspecialchars($data["amount"]))
@@ -24,7 +24,7 @@ class ExpendituresModel extends Model{
     public function updateData($data){
         $this->save([
             "id" => htmlspecialchars($data["id"]),
-            "type" => strtolower(htmlspecialchars($data["type"])),
+            "type" => htmlspecialchars($data["type"]),
             "description" => strtolower(htmlspecialchars($data["description"])),
             "date" => strtolower(htmlspecialchars($data["date"])),
             "amount" => strtolower(htmlspecialchars($data["amount"]))

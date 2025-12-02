@@ -32,8 +32,8 @@ class ProductModel extends Model{
     public function saveData($data){
         $this->save([
             "kode_product" => strtolower(htmlspecialchars($data["kode_product"])),
-            "name" => strtolower(htmlspecialchars($data["name"])),
-            "categori" => strtolower(htmlspecialchars($data["categori"])),
+            "name" => htmlspecialchars($data["name"]),
+            "categori" => htmlspecialchars($data["categori"]),
             "qty" => strtolower(htmlspecialchars($data["qty"])),
             "price_buy" => strtolower(htmlspecialchars($data["price_buy"])),
             "price_sale" => strtolower(htmlspecialchars($data["price_sale"])),
@@ -47,8 +47,8 @@ class ProductModel extends Model{
         $this->save([
             "id" => htmlspecialchars($data["id"]),
             "kode_product" => strtolower(htmlspecialchars($data["kode_product"])),
-            "name" => strtolower(htmlspecialchars($data["name"])),
-            "categori" => strtolower(htmlspecialchars($data["categori"])),
+            "name" => htmlspecialchars($data["name"]),
+            "categori" => htmlspecialchars($data["categori"]),
             "qty" => strtolower(htmlspecialchars($data["qty"])),
             "price_buy" => strtolower(htmlspecialchars($data["price_buy"])),
             "price_sale" => strtolower(htmlspecialchars($data["price_sale"])),

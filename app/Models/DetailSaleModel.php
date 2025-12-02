@@ -33,7 +33,7 @@ class DetailSaleModel extends Model{
         $this->save([
             "kode_penjualan" => strtolower(htmlspecialchars($data["kode_penjualan"])),
             "kode_product" => strtolower(htmlspecialchars($data["kode_product"])),
-            "product" => strtolower(htmlspecialchars($data["product"])),
+            "product" => htmlspecialchars($data["product"]),
             "product_price" => strtolower(htmlspecialchars($data["product_price"])),
             "qty" => strtolower(htmlspecialchars($data["qty"])),
             "sub_total" => strtolower(htmlspecialchars($data["sub_total"]))

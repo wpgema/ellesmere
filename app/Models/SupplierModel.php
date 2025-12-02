@@ -31,10 +31,10 @@ class SupplierModel extends Model{
     // method untuk menambah data suppliers
     public function saveData($data){
         $this->save([
-            "name" => strtolower(htmlspecialchars($data["name"])),
+            "name" => htmlspecialchars($data["name"]),
             "telp" => strtolower(htmlspecialchars($data["telp"])),
             "email" => strtolower(htmlspecialchars($data["email"])),
-            "address" => strtolower(htmlspecialchars($data["address"]))
+            "address" => htmlspecialchars($data["address"])
         ]);
     }
 
@@ -42,10 +42,10 @@ class SupplierModel extends Model{
     public function updateData($data){
         $this->save([
             "id" => htmlspecialchars($data["id"]),
-            "name" => strtolower(htmlspecialchars($data["name"])),
+            "name" => htmlspecialchars($data["name"]),
             "telp" => strtolower(htmlspecialchars($data["telp"])),
             "email" => strtolower(htmlspecialchars($data["email"])),
-            "address" => strtolower(htmlspecialchars($data["address"]))
+            "address" => htmlspecialchars($data["address"])
         ]);
     }
 

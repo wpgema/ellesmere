@@ -1,7 +1,7 @@
 <?php $this->extend("Layout/templates") ?>
 <?php $this->section("content") ?>
 <div class="app-content-header">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6"><h3 class="mb-0">Detail Pelanggan </h3></div>
             <div class="col-sm-6">
@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="p-3 bg-white mt-3">
             <?php if($sales) : ?>
                 <h6 class="fw-semibold">Nama : <?= $sales[0]["customer_name"] ?></h6>

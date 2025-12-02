@@ -3,7 +3,7 @@
 <!--begin::App Content Header-->
 <div class="app-content-header">
     <!--begin::Container-->
-    <div class="container">
+    <div class="container-fluid">
         <!--begin::Row-->
         <div class="row">
             <div class="col-sm-6"><h3 class="mb-0">Produk / Layanan</h3></div>
@@ -16,7 +16,7 @@
         </div>
         <!--end::Row-->
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <form method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?= $product["id"] ?>">
             <input type="hidden" name="imageOld" value="<?= $product["image"] ?>">
@@ -33,13 +33,11 @@
                             <?php endif; ?>
                         </div>
                         <div class="mb-3">
-                            <label for="categori" class="form-label">kategori</label>
-                            <select id="categori" class="form-control" name="categori">
-                                <option value="<?= $product["categori"] ?>" selected><?= $product["categori"] ?></option>
-                                <option value="Alat Tulis Kertas">Alat Tulis Kertas</option>
-                                <option value="Jasa atau Layanan">Jasa atau Layanan</option>
-                                <option value="Lainnya">Lainnya</option>
-                            </select>
+                            <label for="categori" class="form-label">Kategori</label>
+                            <input type="text" class="form-control" id="categori" name="categori" value="<?= $product["categori"] ?>" />
+                            <?php if(session()->has("categori")) : ?>
+                                <p class="text-danger"><?= session()->getFlashdata("categori") ?></p>
+                            <?php endif; ?>
                         </div>
                         <div class="mb-3">
                             <label for="price_buy" class="form-label">Harga Beli</label>

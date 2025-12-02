@@ -41,9 +41,9 @@ class CustomerModel extends Model{
         $this->save([
             "id" => htmlspecialchars($data["id"]),
             "kode_customer" => strtolower(htmlspecialchars($data["kode_customer"])),
-            "name" => strtolower(htmlspecialchars($data["name"])),
+            "name" => htmlspecialchars($data["name"]),
             "telp" => strtolower(htmlspecialchars($data["telp"])),
-            "address" => strtolower(htmlspecialchars($data["address"]))
+            "address" => htmlspecialchars($data["address"])
         ]);
     }
 

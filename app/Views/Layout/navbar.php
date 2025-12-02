@@ -18,7 +18,7 @@
             <!--begin::User Menu Dropdown-->
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <span class="d-none d-md-inline">Suhaimi Percetakan</span>
+                <span class="d-none d-md-inline">Pencatatan Kasir</span>
               </a>
             </li>
             <!--end::User Menu Dropdown-->

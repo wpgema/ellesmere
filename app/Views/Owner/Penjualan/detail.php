@@ -3,7 +3,7 @@
 <!--begin::App Content Header-->
 <div class="app-content-header">
     <!--begin::Container-->
-    <div class="container">
+    <div class="container-fluid">
         <!--begin::Row-->
         <div class="row">
             <div class="col-sm-6"><h3 class="mb-0">Detail Penjualan</h3></div>
@@ -16,7 +16,7 @@
         </div>
         <!--end::Row-->
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="p-3 bg-white mt-3">
             <?php if($sales) : ?>
                 <h6 class="fw-semibold">Nama : <?= $sales[0]["customer_name"] ?></h6>
@@ -50,7 +50,7 @@
                                 <tr class="align-middle">
                                     <td colspan="2"></td>
                                     <td>
-                                        <a href="<?= base_url() ?>struk/<?= $sales[0]["kode_penjualan"] ?>" class="btn btn-sm btn-primary">Cetak Struk</a>
+                                        <!-- <a href="<?= base_url() ?>struk/<?= $sales[0]["kode_penjualan"] ?>" class="btn btn-sm btn-primary">Cetak Struk</a> -->
                                         &nbsp;
                                         <form action="<?= base_url('penjualan/' . $sales[0]['kode_penjualan']) ?>" method="post" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus penjualan ini? Ini akan menghapus juga detail penjualan.');">
                                             <input type="hidden" name="_method" value="DELETE">
@@ -90,7 +90,7 @@
                                 <tr class="align-middle">
                                     <td colspan="4"></td>
                                     <td>
-                                        <a href="<?= base_url() ?>struk/<?= $sales[0]["kode_penjualan"] ?>" class="btn btn-sm btn-primary">Cetak Struk</a>
+                                        <!-- <a href="<?= base_url() ?>struk/<?= $sales[0]["kode_penjualan"] ?>" class="btn btn-sm btn-primary">Cetak Struk</a> -->
                                         &nbsp;
                                         <form action="<?= base_url('penjualan/' . $sales[0]['kode_penjualan']) ?>" method="post" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus penjualan ini? Ini akan menghapus juga detail penjualan.');">
                                             <input type="hidden" name="_method" value="DELETE">

@@ -31,9 +31,9 @@ class EmployesModel extends Model{
     // method untuk menambah data employes
     public function saveData($data){
         $this->save([
-            "name" => strtolower(htmlspecialchars($data["name"])),
+            "name" => htmlspecialchars($data["name"]),
             "telp" => strtolower(htmlspecialchars($data["telp"])),
-            "address" => strtolower(htmlspecialchars($data["address"])),
+            "address" => htmlspecialchars($data["address"]),
             "position" => strtolower(htmlspecialchars($data["position"])),
             "is_active" => strtolower(htmlspecialchars($data["is_active"])),
             "image" => strtolower(htmlspecialchars($data["image"]))
@@ -44,9 +44,9 @@ class EmployesModel extends Model{
     public function updateData($data){
         $this->save([
             "id" => htmlspecialchars($data["id"]),
-            "name" => strtolower(htmlspecialchars($data["name"])),
+            "name" => htmlspecialchars($data["name"]),
             "telp" => strtolower(htmlspecialchars($data["telp"])),
-            "address" => strtolower(htmlspecialchars($data["address"])),
+            "address" => htmlspecialchars($data["address"]),
             "position" => strtolower(htmlspecialchars($data["position"])),
             "is_active" => strtolower(htmlspecialchars($data["is_active"])),
             "image" => strtolower(htmlspecialchars($data["image"]))

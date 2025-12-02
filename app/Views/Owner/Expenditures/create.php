@@ -1,7 +1,7 @@
 <?php $this->extend('Layout/templates') ?>
 <?php $this->section('content') ?>
 
-<div class="container">
+<div class="container-fluid">
     <div class="p-3 bg-white mt-3">
         <h4>Tambah Pengeluaran</h4>
 

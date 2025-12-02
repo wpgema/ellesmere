@@ -3,7 +3,7 @@
 <!--begin::App Content Header-->
 <div class="app-content-header">
     <!--begin::Container-->
-    <div class="container">
+    <div class="container-fluid">
         <!--begin::Row-->
         <div class="row">
             <div class="col-sm-6"><h3 class="mb-0">Karyawan</h3></div>
@@ -16,7 +16,7 @@
         </div>
         <!--end::Row-->
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <form method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?= $employe["id"] ?>">
             <input type="hidden" name="imageOld" value="<?= $employe["image"] ?>">
